@@ -20,4 +20,7 @@ REPO_NAME = $2
 
 function github_api_get {
     local endpoint = $1
+    local url = "${API_URL}/${endpoint}"  
+
+    curl -s -u "${USER_NAME}:${TOKEN}" "${url}"
 }
